@@ -6,7 +6,7 @@ export default function StoryOrigin() {
     <ScrollSlideSection
       left={
         <img
-          src="./src/assets/makhana_exp_1.png"
+          src="public/makhana_exp_1.png"
           className="w-full max-w-lg select-none"
           alt="Makhana Fields"
         />

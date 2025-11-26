@@ -5,7 +5,7 @@ export default function StoryPersonality() {
     <ScrollSlideSection
       left={
         <img
-          src="./src/assets/sup_makhana_png.png"
+          src="public/sup_makhana_png.png"
           className="w-full max-w-md"
         />
       }
