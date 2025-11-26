@@ -33,7 +33,7 @@ export default function StoryMission() {
 
       right={
         <img
-          src="public\makhana_man.png"
+          src="makhana_man.png"
           className="w-full max-w-md"
         />
       }
