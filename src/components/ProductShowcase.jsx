@@ -8,7 +8,11 @@ export default function ProductShowcase() {
   const [liked, setLiked] = useState(false);
   const [addedToCart, setAddedToCart] = useState(false);
 
-  // 3D interaction motion values
+  // ⭐ NEW: Thumbnail images
+  const images = ["Artboard 1.png", "Artboard 2.png", "makhana human.png"];
+  const [activeImage, setActiveImage] = useState(images[0]);
+
+  // 3D interaction values
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -36,8 +40,6 @@ export default function ProductShowcase() {
 
   const flavors = [
     { name: "Classic Salted", icon: "🧂", active: true },
-    // { name: "Peri Peri", icon: "🌶️", active: false },
-    // { name: "Cheese Burst", icon: "🧀", active: false },
   ];
 
   return (
@@ -60,7 +62,7 @@ export default function ProductShowcase() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* SECTION HEADER */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +84,7 @@ export default function ProductShowcase() {
 
         {/* PRODUCT GRID */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* PRODUCT IMAGE & 3D EFFECT */}
+          {/* PRODUCT IMAGE + 3D EFFECT */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -105,13 +107,13 @@ export default function ProductShowcase() {
                 className="absolute inset-0 bg-gradient-to-r from-[#FF6B35] via-[#F7B801] to-[#06D6A0] rounded-full blur-[60px]"
               />
 
-              {/* PRODUCT IMAGE + BORDER */}
+              {/* PRODUCT IMAGE */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="relative z-10 w-full h-full bg-gradient-to-br from-[#2A2A2E] to-[#1A1A1D] rounded-3xl overflow-hidden border-2 border-[#F5F3F4]/10 shadow-2xl"
               >
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1567974611498-833c885aa005"
+                  src={activeImage} // ⭐ NEW
                   alt="Premium Makhana"
                   className="w-full h-full object-cover"
                 />
@@ -145,9 +147,30 @@ export default function ProductShowcase() {
                 <Package className="w-8 h-8 text-[#1A1A1D]" />
               </motion.div>
             </motion.div>
+
+            {/* ⭐ NEW: THUMBNAIL STRIP */}
+            <div className="flex justify-center gap-4 mt-6">
+              {images.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveImage(img)}
+                  className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all ${
+                    activeImage === img
+                      ? "border-[#FF6B35]"
+                      : "border-[#F5F3F4]/20"
+                  }`}
+                >
+                  <ImageWithFallback
+                    src={img}
+                    alt="Thumbnail"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
           </motion.div>
 
-          {/* PRODUCT DETAILS */}
+          {/* PRODUCT DETAILS (UNCHANGED) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -197,7 +220,7 @@ export default function ProductShowcase() {
               </div>
             </div>
 
-            {/* QUANTITY + PRICE */}
+            {/* QUANTITY & PRICE */}
             <div className="flex items-end gap-6">
               {/* Quantity */}
               <div>

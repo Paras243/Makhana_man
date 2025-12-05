@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Mail, Instagram, Twitter, Facebook } from "lucide-react";
 import logo from "../assets/makhana.png"; // ⭐ Your Logo Here
 import Makhana from "./makhana";
+import MakhanaRain from "./MakhanaRain";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -26,6 +27,11 @@ export default function Footer() {
       {/* MAIN CTA */}
      
       <div className="py-32 px-6 relative">
+
+            <div className="absolute inset-0 z-0 pointer-events-none ">
+          <MakhanaRain />
+          {/* Your hero content */}
+        </div>
         {/* Animated BG */}
         <motion.div
           animate={{

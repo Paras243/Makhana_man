@@ -31,9 +31,9 @@ export default function WhyMakhana() {
 
   return (
     <section ref={ref} className="py-32 px-6 bg-[#0F0F12] relative overflow-hidden">
-       <div className="absolute inset-0">
+       {/*<div className="absolute inset-0">
               <Makhana />
-            </div>
+            </div>  */}
       {/* Background Animation */}
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF6B35] rounded-full blur-[200px] opacity-10"

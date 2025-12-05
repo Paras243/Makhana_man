@@ -8,7 +8,7 @@ export default function Makhana() {
     y: Math.random() * 100,
     duration: 10 + Math.random() * 20,
     delay: Math.random() * 1,
-    size: 40 + Math.random() * 50, // Adjust size of makhana images
+    size: 40 + Math.random() * 50,
   }));
 
   return (

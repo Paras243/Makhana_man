@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import Makhana from "./makhana";
+import MakhanaRain from "./MakhanaRain";
 
 export default function StoryHero() {
   return (
@@ -8,7 +9,7 @@ export default function StoryHero() {
       
       {/* 🔥 Cinematic Bokeh / Particles */}
       <div className="absolute inset-0 opacity-100 z-10 pointer-events-none">
-        <Makhana />
+        <MakhanaRain />
       </div>
 
       {/* 🔥 Premium Spotlight Background */}

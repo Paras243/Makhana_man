@@ -51,9 +51,9 @@ export default function HealthBenefits() {
   return (
     <section id="benefits" className="py-32 px-6 bg-[#0F0F12] relative overflow-hidden">
 
- <div className="absolute inset-0">
+ {/* <div className="absolute inset-0">
         <Makhana />
-      </div>
+      </div> */}
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]">

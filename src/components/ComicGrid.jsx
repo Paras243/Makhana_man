@@ -15,7 +15,7 @@ export default function ComicGrid() {
         
         {/* Heading */}
         <h2 className="text-center text-4xl md:text-6xl font-black text-white mb-12">
-          <span className="text-[#FF6B35]">Comic</span> Universe
+          <span className="text-[#FF6B35]">The Makhana Man</span> World
         </h2>
 
         {/* Grid */}

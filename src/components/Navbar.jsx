@@ -43,8 +43,7 @@ export default function Navbar({page = "home"}) {
     >
       <div className="max-w-7xl  mx-auto px-6 py-4">
   <div className="flex items-center justify-between ">
-   {/* Logo Only - Premium Glow Version */}
-{/* Logo Only - Premium Glow Version (BIGGER & CLEANER) */}
+  
 <motion.a
   href="/"
   className="cursor-pointer select-none "
@@ -76,7 +75,7 @@ export default function Navbar({page = "home"}) {
 
 
 
-          {/* Desktop Navigation */}
+          {/* Desktop */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
               <motion.a
@@ -115,7 +114,6 @@ export default function Navbar({page = "home"}) {
             </motion.button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
